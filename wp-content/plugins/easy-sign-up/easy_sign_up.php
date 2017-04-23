@@ -4,7 +4,7 @@ Plugin Name: Easy Sign Up
 Plugin URI: http://www.beforesite.com/documentation/
 Description: E-mail Sign Up and Redirection to a url. Possible use are collecting email addresses for a newsletter, or leads for your sales force before redirecting to a brochure. Use the following short code in your pages and posts <code>[easy_sign_up title="Put in your own title here"]</code> Or add the form via a <a href="widgets.php">Widget</a>. Change the options under Easy Sign Up: <a href="admin.php?page=esu_options_pg">Easy Sign Up</a>
 Author: Andrew @ Geeenville Web Design
-Version: 3.4
+Version: 3.4.1
 Author URI: http://www.beforesite.com
 License: GPLv2 or later
 Text Domain: easy-sign-up

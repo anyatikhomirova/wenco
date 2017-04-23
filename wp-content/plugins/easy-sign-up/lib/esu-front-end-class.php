@@ -150,7 +150,7 @@ if (!class_exists("EsuForms")) {
 					  case 'honey':
 					  	$output .= '<li class="esu-hide">';
 					  		$output .= '<label for="'. esc_attr( $id ) . '" class="esu-hide">'.$value['name'].'</label>';
-					  		$output .= '<input id="' . esc_attr( $id ) . '" class="'.esc_attr( $class ).'" name="' . esc_attr( $id ) . '" type="text" ' . self::esu_if_ie_input_js(esc_attr( $value['name'] )) . '>';
+					  		$output .= '<input id="' . esc_attr( $id ) . '" class="'.esc_attr( $class ).'" name="' . esc_attr( $id ) . '" type="text" value="">';
 					  		$output .= "<br class=\"$esu_label_class\">";
 					  	$output .= '</li>'."\n";
 					  break;

@@ -3,11 +3,11 @@
  * esu akismet
  */
 class esuAkismet {
-  /* the __construct */
-  function esuAkismet() 
+  /* // the __construct
+  function __construct()
   {
-    // code...
   }
+  */
 
   public static function esu_has_akismet() {
     return function_exists( 'akismet_http_post' );

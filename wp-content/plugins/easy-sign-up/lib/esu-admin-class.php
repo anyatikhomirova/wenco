@@ -9,7 +9,7 @@
 if (!class_exists("EsuAdmin")) {
 	class EsuAdmin
 	{
-		function EsuAdmin() //__construct()
+		function __construct()
 		{
 			add_action( 'admin_init', array( $this,'esu_admin_init' ) );
 			add_action( 'admin_menu', array( $this,'esu_add_pages'  ) );

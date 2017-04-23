@@ -5,7 +5,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: auto responder, auto-responder, autoresponder, html autoresponder, jump page, squeeze page, squeeze form, form, emailer, email, redirection, leads, mailing list, newsletter, newsletter signup, sign up, beforesite, mailchimp
 Requires at least: 4.3
-Tested up to: 4.6
+Tested up to: 4.7.9
 Stable tag: trunk
 
 This Plugin creates a form to collect the name and email from your visitors, who are then redirected to the web address of your choice.
@@ -93,8 +93,8 @@ Instead it did this:`
 [Easy Sign Up Support Forum](http://wordpress.org/support/plugin/easy-sign-up)
 
 == Upgrade Notice ==
-= 3.3.6 =
-Changed the text domain to match the plugin slug.
+Changes to support users still using IE
+Changes to address PHP 7.x depreciation notices. 
 
 == Screenshots ==
 1. Easy Sign Up Options Page
@@ -105,6 +105,7 @@ Changed the text domain to match the plugin slug.
 
 
 == Changelog ==
+= 3.4.1 =
 = 3.4 =
   Added new custom tags to the auto reply email, #firstname# & #lastname#.
 = 3.3.9 =
