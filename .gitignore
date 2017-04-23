@@ -94,3 +94,5 @@ forum/*
 *.tar
 *.tgz
 *.gz
+
+nbproject
