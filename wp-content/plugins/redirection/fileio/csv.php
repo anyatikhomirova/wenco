@@ -1,42 +1,37 @@
 <?php
 
 class Red_Csv_File extends Red_FileIO {
-	var $id;
-	var $items;
-
-	function collect( $module ) {
-		$this->id = $module->id;
-
-		$items = Red_Item::get_by_module( $module->id );
-
-		if ( count( $items ) > 0 ) {
-			foreach ( $items AS $item ) {
-				$this->items[] = array(
-					'source' => $item->url,
-					'target' => ( $item->action_type == 'url' ? $item->action_data : '' ),
-					'last_count' => $item->last_count
-				);
-			}
-		}
-	}
-
-	function feed( $filename = '', $heading = '' ) {
-		$filename = sprintf( __( 'module_%d.csv', 'redirection' ), $this->id );
+	function export( array $items ) {
+		$filename = 'redirection-'.date_i18n( get_option( 'date_format' ) ).'.csv';
 
 		header( 'Content-Type: text/csv' );
 		header( 'Cache-Control: no-cache, must-revalidate' );
 		header( 'Expires: Mon, 26 Jul 1997 05:00:00 GMT' );
 		header( 'Content-Disposition: attachment; filename="'.$filename.'"' );
 
-		if ( count( $this->items ) > 0 ) {
-			echo "source,target,hits\r\n";
+		$stdout = fopen( 'php://output', 'w' );
 
-			$stdout = fopen( 'php://output', 'w' );
+		fputcsv( $stdout, array( 'source', 'target', 'regex', 'type', 'code', 'match', 'hits', 'title' ) );
 
-			foreach ( $this->items AS $line ) {
-				fputcsv( $stdout, $line );
-			}
+		foreach ( $items as $line ) {
+			$csv = array(
+				$line->get_url(),
+				$line->get_action_data(),
+				$line->is_regex(),
+				$line->get_action_type(),
+				$line->get_action_code(),
+				$line->get_action_type(),
+				$line->get_hits(),
+				$line->get_title(),
+			);
+
+			$csv = array_map( array( $this, 'escape_csv' ), $csv );
+			fwrite( $stdout, join( $csv, ',') );
 		}
+	}
+
+	private function escape_csv( $item ) {
+		return '"'.str_replace( '"', '""', $item ).'"';
 	}
 
 	function load( $group, $data, $filename = '' ) {
@@ -45,14 +40,14 @@ class Red_Csv_File extends Red_FileIO {
 
 		if ( $file ) {
 			while ( ( $csv = fgetcsv( $file, 1000, ',' ) ) ) {
-				if ( $csv[0] != 'source' && $csv[1] != 'target') {
+				if ( $csv[0] !== 'source' && $csv[1] !== 'target' ) {
 					Red_Item::create( array(
 						'source' => trim( $csv[0] ),
 						'target' => trim( $csv[1] ),
 						'regex'  => $this->is_regex( $csv[0] ),
-						'group'  => $group,
+						'group_id'  => $group,
 						'match'  => 'url',
-						'red_action' => 'url'
+						'red_action' => 'url',
 					) );
 
 					$count++;
@@ -63,20 +58,12 @@ class Red_Csv_File extends Red_FileIO {
 		return $count;
 	}
 
-	function is_regex ($url) {
-		$regex  = '()[]$^?+';
-		$escape = false;
+	function is_regex( $url ) {
+		$regex = '()[]$^*';
 
-		for ( $x = 0; $x < strlen( $url ); $x++ ) {
+		if ( strpbrk( $url, $regex ) === false )
+			return false;
 
-			if ( $url{$x} == '\\' )
-				$escape = true;
-			elseif ( strpos( $regex, $url{$x} ) !== false && !$escape )
-				return true;
-			else
-				$escape = false;
-		}
-
-		return false;
+		return true;
 	}
 }
