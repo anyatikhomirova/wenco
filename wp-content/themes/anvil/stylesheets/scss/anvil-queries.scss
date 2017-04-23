@@ -1,0 +1,164 @@
+
+//////////////////////////////////////////////
+/////////////    MEDIA QUERIES   /////////////
+//////////////////////////////////////////////
+
+// #mobile-nav{
+// 	display: none;
+// }
+
+#st-trigger-effects{
+	display: none;
+}
+
+/* 825px
+- SLIDERS
+*/
+@media screen and (max-width: 825px){
+	.slideshow-wrapper li{
+		.text-container.right-side,
+		.text-container.left-side {
+		    bottom: 0;
+		    height: auto;
+		    left: 0;
+		    position: absolute;
+		    top: auto;
+		    width: 100%;
+		}
+
+	}
+}
+
+
+/* 768px
+- Description
+- 
+*/
+@media screen and (max-width: 767px){
+
+	#main-nav{
+		display: none;
+	}
+	// #mobile-nav{
+	// //	display: block;
+	// 	li{
+	// 		display: block;
+	// 		float: none;
+	// 	}
+	// }
+
+	#st-trigger-effects{
+		display: block;
+		width: 100%;
+
+		a{
+			display: block;
+		}
+	}
+
+	.top-banner{
+		text-align: center;
+
+		ul.social-menu{
+			float: none;
+		}
+	}
+
+	.site-branding{
+		text-align: center;
+		padding-bottom: 25px;
+	}
+	.site-tagline{
+		text-align: center;
+
+		h3{
+			text-align: center;
+		}
+	}
+	#site-navigation{
+		#main-nav{
+			display: none;
+		}
+	}
+	.buckets-callout{
+		.callouts{
+			img{
+				float: left;
+				margin-right: 15px;
+				max-width: 50%;
+			}
+			.panel{
+				overflow: auto;
+			}
+		}
+	}
+
+
+	article.status-publish{
+		>.row{
+			>.large-4{
+				width: 33.3333%;
+			}
+			>.large-8{
+				width: 66.6666%;
+			}
+		}
+	}
+	#colophon{
+		.social-menu{
+			margin-top: 15px;
+		}
+	}
+
+	#footer-nav{
+		li{
+			float: none;
+			display: block;
+
+			&:after{
+				display: none;
+			}
+		}
+	}
+}
+
+
+
+/* 500px
+- Description
+- 
+*/
+@media screen and (max-width: 500px){
+	
+	.buckets-callout{
+		.callouts{
+			img{
+				float: none;
+				margin-right: 0;
+				max-width: 100%;
+				margin: 0 auto;
+				display: block;
+			}
+			.panel{
+				overflow: auto;
+			}
+		}
+	}
+
+
+	article.status-publish{
+		>.row{
+			>.large-4,
+			>.large-8{
+				width: 100%;
+			}
+			>.large-4{
+				img{
+					display: block;
+					margin: 0 auto;
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}

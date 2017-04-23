@@ -1,0 +1,88 @@
+/*
+* Custom Site Styles 
+*/
+
+#tribe-events-content select {
+	width: auto; 
+}
+.top-banner.panel.callout{
+
+	margin-bottom: 0; 
+	padding-bottom: 0.5em; 
+
+	.social-menu.menu {
+		margin-bottom: 0; 
+	}
+}
+.social-menu.menu > li {
+	list-style: none;
+	font-size: 1.6em; 
+	margin: 0 5px;
+	
+	a {
+		color: #000; 
+	} 
+}
+
+.menu {
+	li {
+		display: inline-block; 
+	}
+}
+
+nav#site-navigation {
+    margin-top: 20px;
+}
+
+.callouts {
+	
+	h3 {
+		margin-top: 0.625em; 
+	}
+	
+}
+
+.site-footer.panel {
+	margin-top: 60px; 
+	margin-bottom: 0; 
+}
+
+#footer-nav {
+	
+	li {
+	
+		&:after {
+			content: " | "; 
+		}
+		&:last-of-type:after {
+			content: none; 
+		}
+	}
+	
+}
+
+
+/* 
+ * 
+ * Post Content
+ *
+ */ 
+ 
+ .hentry {
+	 margin-bottom: 50px; 
+ }
+ 
+ #submit, #searchsubmit {
+	     @include button-base;
+    @include button-size;
+    @include button-style;
+ }
+
+/* 
+ * 
+ * Contact Page
+ *
+ */  
+ .contact-info {
+	 list-style: none;
+ }
