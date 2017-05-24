@@ -1,4 +1,4 @@
-/*! Custom Sidebars - v3.0.4
+/*! Custom Sidebars - v3.0.6
  * https://premium.wpmudev.org/project/custom-sidebars-pro/
  * Copyright (c) 2017; * Licensed GPLv2+ */
 /*global window:false */
@@ -643,6 +643,26 @@ window.csSidebars = null;
 
 			popup.show();
 			popup.$().find( '#csb-name' ).focus();
+
+			/**
+			 * handle enter key on new sidebar name
+			 */
+			popup.$().on( 'keypress', '#csb-name', function(e) {
+				if ( 13 === e.keyCode ) {
+					if ( 0 < $(this).val().length ) {
+						$('#csb-description').focus();
+					}
+				}
+			});
+
+			/**
+			 * handle enter key on new sidebar description
+			 */
+			popup.$().on( 'keypress', '#csb-description', function(e) {
+				if ( 13 === e.keyCode ) {
+					popup.$('.btn-save').click();
+				}
+			});
 
 			// Add event hooks to the editor.
 			popup.$().on( 'click', '#csb-more', toggle_extras );
@@ -1422,9 +1442,8 @@ window.csSidebars = null;
 			if ( 0 === $(".sidebars-column-1 .inner .widgets-holder-wrap").length ) {
 				var template = wp.template('custom-sidebars-new');
 				$(".sidebars-column-1 .inner").before( template() );
-				$(".custom-sidebars-new").on( "click", function() {
+				$(".custom-sidebars-add-new").on( "click", function() {
 					$( "button.btn-create-sidebar" ).click();
-					$(this).detach();
 				});
 			}
 		}
