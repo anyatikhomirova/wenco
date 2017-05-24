@@ -1,4 +1,5 @@
 <?php
+
 /* Logos */
 	function my_custom_login_logo() {
     echo '<style type="text/css">
