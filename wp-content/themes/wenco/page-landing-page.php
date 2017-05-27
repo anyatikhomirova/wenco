@@ -26,7 +26,8 @@ get_header( 'landing-page' ); ?>
 				</div>
 
         <div class="header-cta large-4 small-6 columns">
-            <button><?php the_field('cta_button_text'); ?></button>
+<!--            <button><?php //the_field('cta_button_text'); ?></button>-->
+            <a class="download fancybox button " href="#fancy-callout-<?php echo get_the_ID(); ?>"><?php the_field('cta_button_text'); ?></a>
             <?php do_action('icl_language_selector'); ?>
 				</div>
 
@@ -89,7 +90,9 @@ get_header( 'landing-page' ); ?>
       <div class="columns large-8 large-offset-2">
         <h2><?php the_field('cta_headline'); ?></h2>
         <p><?php the_field('cta_text'); ?></p>
-        <p><button><?php the_field('cta_button_text'); ?></button></p>
+        <p>
+          <a class="download fancybox button " href="#fancy-callout-<?php echo get_the_ID(); ?>"><?php the_field('cta_button_text'); ?></a>
+        </p>
       </div>
     </div>
 
@@ -122,6 +125,24 @@ get_header( 'landing-page' ); ?>
         </div>
       <?php endwhile; ?>
     </div>
+
+  </div>
+
+  <div class="fancybox-hidden" id="fancy-callout-<?php echo get_the_ID(); ?>">
+
+    <?php
+    // Show a different form based on language.
+    $form_id_en = get_field('gravity_form_id_en');
+    if (ICL_LANGUAGE_CODE == 'es') {
+      gravity_form( get_field('gravity_form_id_es') );
+    }elseif(ICL_LANGUAGE_CODE == 'ru'){
+      gravity_form( get_field('gravity_form_id_ru') );
+    }elseif(ICL_LANGUAGE_CODE == 'fr'){
+      gravity_form( get_field('gravity_form_id_fr') );
+    }else{
+      gravity_form( get_field('gravity_form_id_en') );
+    }
+    ?>
 
   </div>
 
