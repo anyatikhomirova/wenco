@@ -131,7 +131,6 @@ get_header( 'landing-page' ); ?>
 
     <?php
     // Show a different form based on language.
-    $form_id_en = get_field('gravity_form_id_en');
     if (ICL_LANGUAGE_CODE == 'es') {
       gravity_form( get_field('gravity_form_id_es') );
     }elseif(ICL_LANGUAGE_CODE == 'ru'){
