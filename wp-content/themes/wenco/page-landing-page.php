@@ -26,7 +26,6 @@ get_header( 'landing-page' ); ?>
 				</div>
 
         <div class="header-cta large-4 small-6 columns">
-<!--            <button><?php //the_field('cta_button_text'); ?></button>-->
             <a class="download fancybox button " href="#fancy-callout-<?php echo get_the_ID(); ?>"><?php the_field('cta_button_text'); ?></a>
             <?php do_action('icl_language_selector'); ?>
 				</div>
