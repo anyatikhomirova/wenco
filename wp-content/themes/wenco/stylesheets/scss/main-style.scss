@@ -1916,7 +1916,7 @@ html[lang=en-US]{
         padding-top: 26px;
         text-align: right;
 
-        button {
+        button, .button {
           @media screen and (max-width: 500px) {
             @include font-size(16);
             padding: .5rem;
