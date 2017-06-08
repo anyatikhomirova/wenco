@@ -132,13 +132,13 @@ get_header( 'landing-page' ); ?>
     <?php
     // Show a different form based on language.
     if (ICL_LANGUAGE_CODE == 'es') {
-      gravity_form( get_field('gravity_form_id_es') );
+      gravity_form( get_field('gravity_form_id_es'), true, true, false, null, true );
     }elseif(ICL_LANGUAGE_CODE == 'ru'){
-      gravity_form( get_field('gravity_form_id_ru') );
+      gravity_form( get_field('gravity_form_id_ru'), true, true, false, null, true );
     }elseif(ICL_LANGUAGE_CODE == 'fr'){
-      gravity_form( get_field('gravity_form_id_fr') );
+      gravity_form( get_field('gravity_form_id_fr'), true, true, false, null, true );
     }else{
-      gravity_form( get_field('gravity_form_id_en') );
+      gravity_form( get_field('gravity_form_id_en'), true, true, false, null, true );
     }
     ?>
 
