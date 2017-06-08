@@ -1864,6 +1864,10 @@ html[lang=en-US]{
       content: none;
     }
   }
+  ul li {
+    margin-bottom: 20px;
+    list-style: disc;
+  }
   .divider {
     background: url('../../images/data-line-divider.png') no-repeat center center;
     height: 40px;
@@ -1877,13 +1881,10 @@ html[lang=en-US]{
   }
 
   .hero-container {
-    min-height: 750px;
+    min-height: 950px;
     background-size: cover;
     background-position-x: center;
-
-    @media screen and (max-width: 767px) {
-      min-height: 500px;
-    }
+    background-position-y: bottom;
 
     header {
       padding-top: 30px;
@@ -1945,16 +1946,24 @@ html[lang=en-US]{
 
     .headline-container {
       text-align: center;
-      margin-top: 18%;
+      margin-top: 22%;
 
-      h2 {
+      h2, h3, h4, p, li {
         color: white;
       }
+      h3 {
+        text-transform: none;
+      }
       p {
-        color: white;
         strong {
           @include myriad(400, italic);
           color: $orange;
+        }
+      }
+      button, .button {
+        @media screen and (max-width: 500px) {
+          padding: .5rem 2rem .5rem 2rem;
+          margin-bottom: 0;
         }
       }
     }
@@ -1995,7 +2004,7 @@ html[lang=en-US]{
     background-position-y: bottom;
     padding: 50px 0;
 
-    h2, p {
+    h2, h3, h4, p, li {
       color: white;
     }
     p {
@@ -2005,6 +2014,10 @@ html[lang=en-US]{
       padding-top: 30px;
       @media screen and (max-width: 767px) {
         padding-top: 0;
+        text-align: center;
+        ul li {
+          text-align: left;
+        }
       }
     }
     .image {
@@ -2021,7 +2034,7 @@ html[lang=en-US]{
     padding: 50px 0;
     text-align: center;
 
-    h2, p {
+    h2, h3, h4, p, li {
       color: white;
     }
     button, .button {
