@@ -144,6 +144,18 @@ get_header( 'landing-page' ); ?>
 
   </div>
 
+<style>
+  <?php the_field('extra_css') ?>
+  
+  <?php if( get_field('hero_background_image_mobile') ): ?>
+    @media screen and (max-width: 500px) {
+      .page-template-page-landing-page .hero-container {
+        background-image: url('<?php the_field('hero_background_image_mobile'); ?>') !important;
+      }
+    }
+  <?php endif; ?>
+</style>
+
 <?php endwhile; // end of the loop. ?>
 
 <?php get_footer( 'landing-page' ); ?>
