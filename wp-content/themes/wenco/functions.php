@@ -36,7 +36,13 @@ function child_scripts() {
 
 	wp_dequeue_style( 'styles' );
 	wp_deregister_style( 'styles' );
-	wp_enqueue_style( 'mainstyle', get_stylesheet_directory_uri() . '/stylesheets/css/main-style.css' );
+	wp_enqueue_style( 'mainstyle', get_stylesheet_directory_uri() . '/stylesheets/css/main-style.css', array(), 'v1.0.0' );
+
+	wp_register_script( 'wenco-landing', get_bloginfo( 'stylesheet_directory' ) . '/js/landing.js', array( 'jquery' ), 'v1.0.0' );
+
+	if ( is_page_template( 'page-landing-page.php' ) ) {
+		wp_enqueue_script( 'wenco-landing' );
+	}
 
 }
 add_action( 'wp_enqueue_scripts', 'child_scripts' , 20);
