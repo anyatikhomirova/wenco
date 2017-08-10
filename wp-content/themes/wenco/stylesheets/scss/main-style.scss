@@ -1816,7 +1816,8 @@ html[lang=en-US]{
 //////    LANDING PAGES     ///////
 ///////////////////////////////////
 
-.page-template-page-landing-page {
+.page-template-page-landing-page,
+.page-template-avoca-pas-landing-page {
   h1 {
     @include myriad(400, italic);
     @include font-size(26);
@@ -2029,7 +2030,7 @@ html[lang=en-US]{
     }
   }
 
-  .cta-container {
+  .cta-container, .watch-video-container {
     background-size: cover;
     background-position-x: center;
     padding: 50px 0;
@@ -2136,6 +2137,43 @@ html[lang=en-US]{
       }
     }
   }
+}
+
+.page-template-avoca-pas-landing-page {
+
+	.hero-container {
+		.headline-container {
+			text-align: left;
+			margin-left: 5%;
+		}
+	}
+
+	.benefit-container {
+		padding-top: 0px;
+
+		.columns {
+			text-align: left;
+		}
+	}
+
+	.how-it-works-container {
+		margin-top: 50px;
+
+		.image {
+			margin-top: -120px;
+			img {
+				max-width: inherit;
+			}
+		}
+	}
+
+	.cta-container {
+		margin-top: 50px;
+	}
+
+	footer {
+		margin-top: 0;
+	}
 }
 
 
@@ -2443,6 +2481,17 @@ html[lang=en-US]{
 			}
 		}
 	}
+
+	.page-template-avoca-pas-landing-page {
+		.how-it-works-container {
+			.image {
+				margin-top: 0px;
+				img {
+					max-width: 100%;
+				}
+			}
+		}
+	}
 }
 
 
@@ -2490,6 +2539,12 @@ html[lang=en-US]{
 			display: block;
 			clear: both;
 			text-align: center;
+		}
+	}
+
+	.page-template-avoca-pas-landing-page {
+		iframe {
+			width: 320px;
 		}
 	}
 

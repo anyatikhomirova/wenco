@@ -40,7 +40,7 @@ function child_scripts() {
 
 	wp_register_script( 'wenco-landing', get_bloginfo( 'stylesheet_directory' ) . '/js/landing.js', array( 'jquery' ), 'v1.0.0' );
 
-	if ( is_page_template( 'page-landing-page.php' ) ) {
+	if ( is_page_template( 'page-landing-page.php' ) || is_page_template( 'avoca-pas-landing-page.php' ) ) {
 		wp_enqueue_script( 'wenco-landing' );
 	}
 
