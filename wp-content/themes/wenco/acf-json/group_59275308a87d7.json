@@ -102,6 +102,30 @@
             "endpoint": 0
         },
         {
+            "key": "field_598db1e18396d",
+            "label": "Benefits Background Image",
+            "name": "benefits_background_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5927544c795d0",
             "label": "Benefits Headline",
             "name": "benefits_headline",
@@ -546,6 +570,103 @@
             "mime_types": ""
         },
         {
+            "key": "field_598c58878f708",
+            "label": "Watch the Video",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_598c58bd8f709",
+            "label": "Watch the Video Background Image",
+            "name": "watch_the_video_background_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_598c58e98f70a",
+            "label": "Watch the Video Headline",
+            "name": "watch_the_video_headline",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_598c58f88f70b",
+            "label": "Watch the Video Text",
+            "name": "watch_the_video_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_598c59278f70c",
+            "label": "Watch the Video Embed Iframe",
+            "name": "watch_the_video_embed_iframe",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_59279b58c9f12",
             "label": "Logos",
             "name": "",
@@ -649,6 +770,13 @@
                 "operator": "==",
                 "value": "page-landing-page.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-landing-page-2.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -666,5 +794,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1499718906
+    "modified": 1502458426
 }
