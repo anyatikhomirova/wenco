@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Avoca PAS Landing Page
+ * Template Name: Landing Page 2
  *
  * @package Forge Saas
  */

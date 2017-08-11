@@ -751,7 +751,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "avoca-pas-landing-page.php"
+                "value": "page-landing-page-2.php"
             }
         ]
     ],
@@ -770,5 +770,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1502374417
+    "modified": 1502436450
 }
