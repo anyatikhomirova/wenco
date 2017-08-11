@@ -1979,6 +1979,8 @@ html[lang=en-US]{
   }
 
   .benefit-container {
+	background-size: cover;
+    background-position-x: center;
     padding: 50px 0;
 
     .intro {
@@ -2149,7 +2151,8 @@ html[lang=en-US]{
 	}
 
 	.benefit-container {
-		padding-top: 0px;
+		margin-top: -50px;
+		padding: 50px 0 100px 0;
 
 		.columns {
 			text-align: left;
@@ -2157,7 +2160,6 @@ html[lang=en-US]{
 	}
 
 	.how-it-works-container {
-		margin-top: 50px;
 
 		.image {
 			margin-top: -120px;

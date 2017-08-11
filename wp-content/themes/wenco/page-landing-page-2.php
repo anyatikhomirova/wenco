@@ -44,7 +44,7 @@ get_header( 'landing-page' ); ?>
   </div>
 
 
-  <div class="benefit-container">
+  <div class="benefit-container" style="background-image: url('<?php the_field('benefits_background_image'); ?>');">
     
     <div class="row intro">
       <div class="columns large-8 large-offset-2">
