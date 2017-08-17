@@ -60,12 +60,12 @@ get_header( 'landing-page' ); ?>
   <div class="how-it-works-container" style="background-image: url('<?php the_field('how_it_works_background_image'); ?>');">
 
     <div class="row">
-      <div class="text columns large-5">
+      <div class="image columns large-7 push-5">
+        <img src="<?php the_field('how_it_works_side_image'); ?>" />
+      </div>
+      <div class="text columns large-5 pull-7">
         <h2><?php the_field('how_it_works_headline'); ?></h2>
         <p><?php the_field('how_it_works_text'); ?></p>
-      </div>
-      <div class="image columns large-7">
-        <img src="<?php the_field('how_it_works_side_image'); ?>" />
       </div>
     </div>
 
