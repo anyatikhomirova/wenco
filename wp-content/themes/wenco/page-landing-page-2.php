@@ -155,7 +155,7 @@ get_header( 'landing-page' ); ?>
   
   <?php if( get_field('hero_background_image_mobile') ): ?>
     @media screen and (max-width: 500px) {
-      .page-template-avoca-pas-landing-page .hero-container {
+      .page-template-page-landing-page-2 .hero-container {
         background-image: url('<?php the_field('hero_background_image_mobile'); ?>') !important;
       }
     }
