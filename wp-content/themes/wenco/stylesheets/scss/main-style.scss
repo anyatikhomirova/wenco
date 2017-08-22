@@ -2164,7 +2164,8 @@ html[lang=en-US]{
 		.image {
 			margin-top: -120px;
 			img {
-				max-width: inherit;
+				max-width: 100%;
+				margin-bottom:30px;
 			}
 		}
 	}
@@ -2479,17 +2480,6 @@ html[lang=en-US]{
 			.content-wrapper{
 				&:before{
 					background: $orange;
-				}
-			}
-		}
-	}
-
-	.page-template-page-landing-page-2 {
-		.how-it-works-container {
-			.image {
-				margin-top: 0px;
-				img {
-					max-width: 100%;
 				}
 			}
 		}
