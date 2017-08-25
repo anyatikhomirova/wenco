@@ -1816,7 +1816,8 @@ html[lang=en-US]{
 //////    LANDING PAGES     ///////
 ///////////////////////////////////
 
-.page-template-page-landing-page {
+.page-template-page-landing-page,
+.page-template-page-landing-page-2 {
   h1 {
     @include myriad(400, italic);
     @include font-size(26);
@@ -1978,6 +1979,8 @@ html[lang=en-US]{
   }
 
   .benefit-container {
+	background-size: cover;
+    background-position-x: center;
     padding: 50px 0;
 
     .intro {
@@ -2029,7 +2032,7 @@ html[lang=en-US]{
     }
   }
 
-  .cta-container {
+  .cta-container, .watch-video-container {
     background-size: cover;
     background-position-x: center;
     padding: 50px 0;
@@ -2136,6 +2139,44 @@ html[lang=en-US]{
       }
     }
   }
+}
+
+.page-template-page-landing-page-2 {
+
+	.hero-container {
+		.headline-container {
+			text-align: left;
+			margin-left: 5%;
+		}
+	}
+
+	.benefit-container {
+		margin-top: -50px;
+		padding: 50px 0 100px 0;
+
+		.columns {
+			text-align: left;
+		}
+	}
+
+	.how-it-works-container {
+
+		.image {
+			margin-top: -120px;
+			img {
+				max-width: 100%;
+				margin-bottom:30px;
+			}
+		}
+	}
+
+	.cta-container {
+		margin-top: 50px;
+	}
+
+	footer {
+		margin-top: 0;
+	}
 }
 
 
@@ -2490,6 +2531,12 @@ html[lang=en-US]{
 			display: block;
 			clear: both;
 			text-align: center;
+		}
+	}
+
+	.page-template-page-landing-page-2 {
+		iframe {
+			width: 320px;
 		}
 	}
 
