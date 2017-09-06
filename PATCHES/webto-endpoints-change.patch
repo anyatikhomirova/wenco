@@ -1,0 +1,26 @@
+commit c7a24f04112f3fe81137270f22d130707938cd6a
+Author: John Lutz <john@cheekymonkeymedia.ca>
+Date:   Wed Sep 6 09:01:40 2017 -0500
+
+    Update web-to endpoint subdomain.
+
+diff --git a/trunk/inc/web-to-lead.php b/trunk/inc/web-to-lead.php
+index 5612443..932c273 100644
+--- a/trunk/inc/web-to-lead.php
++++ b/trunk/inc/web-to-lead.php
+@@ -708,7 +708,7 @@ if (class_exists("GFForms")) {
+ 			$args = apply_filters( 'gf_salesforce_request_args', $args, $test );
+ 
+ 			// Use test/www subdomain based on whether this is a test or live
+-			$sub = apply_filters( 'gf_salesforce_request_subdomain', ($test ? 'test' : 'www'), $test );
++			$sub = apply_filters( 'gf_salesforce_request_subdomain', ($test ? 'test' : 'webto'), $test );
+ 
+ 			// Use (test|www) subdomain and WebTo(Lead|Case) based on setting
+ 			$url = apply_filters( 'gf_salesforce_request_url', sprintf('https://%s.salesforce.com/servlet/servlet.WebTo%s?encoding=UTF-8', $sub, $type), $args);
+@@ -766,4 +766,4 @@ if (class_exists("GFForms")) {
+ 
+ 	}
+ 
+-}
+\ No newline at end of file
++}
