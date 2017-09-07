@@ -171,7 +171,7 @@ function forge_saas_scripts() {
 	wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/stylesheets/css/jquery.fancybox.css' );
 	wp_enqueue_style( 'foundation-ie8', get_template_directory_uri() . '/stylesheets/css/ie8-foundation.css' );
     wp_enqueue_style( 'symbolset-css', get_template_directory_uri() . '/webfonts/ss-social-circle.css');
-    wp_enqueue_style( 'googlefonts', 'http://fonts.googleapis.com/css?family=Cabin:400italic,700,400');
+    wp_enqueue_style( 'googlefonts', '//fonts.googleapis.com/css?family=Cabin:400italic,700,400');
 
 // register all theme javascripts
     wp_register_script( 'forge_modernizr', get_template_directory_uri() . '/js/vendor/custom.modernizr.js' ); 
