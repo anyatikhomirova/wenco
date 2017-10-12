@@ -83,6 +83,23 @@ get_header( 'landing-page' ); ?>
   </div>
 
 
+  <?php if ( get_field('watch_the_video_embed_iframe') ) : ?>
+    <div class="watch-video-container" style="background-image: url('<?php the_field('watch_the_video_background_image'); ?>');">
+
+      <div class="row">
+        <div class="columns large-8 large-offset-2">
+          <h2><?php the_field('watch_the_video_headline'); ?></h2>
+          <p><?php the_field('watch_the_video_text'); ?></p>
+          <div>
+            <?php the_field('watch_the_video_embed_iframe'); ?>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  <?php endif; ?>
+
+
   <div class="cta-container" style="background-image: url('<?php the_field('cta_background_image'); ?>');">
     
     <div class="row">
