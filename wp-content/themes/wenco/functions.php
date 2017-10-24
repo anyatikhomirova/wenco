@@ -80,3 +80,30 @@ function wenco_acf_json_save_point( $path ) {
 	return get_stylesheet_directory() . '/acf-json';
 }
 add_filter( 'acf/settings/save_json', 'wenco_acf_json_save_point' );
+
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page(array(
+		'page_title' 	=> 'Contact',
+		'menu_title'	=> 'Contact',
+		'menu_slug' 	=> 'acf-options-contact',
+		'parent_slug'	=> 'acf-options',
+	));
+  acf_add_options_page(array(
+		'page_title' 	=> 'Header',
+		'menu_title'	=> 'Header',
+		'menu_slug' 	=> 'acf-options-header',
+		'parent_slug'	=> 'acf-options',
+	));
+  acf_add_options_page(array(
+		'page_title' 	=> 'Footer',
+		'menu_title'	=> 'Footer',
+		'menu_slug' 	=> 'acf-options-footer',
+		'parent_slug'	=> 'acf-options',
+	));
+  acf_add_options_page(array(
+		'page_title' 	=> 'Page',
+		'menu_title'	=> 'Page',
+		'menu_slug' 	=> 'acf-options-page',
+		'parent_slug'	=> 'acf-options',
+	));
+}

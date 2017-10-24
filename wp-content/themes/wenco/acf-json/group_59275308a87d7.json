@@ -446,72 +446,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5929d5e274427",
-            "label": "CTA Gravity Form ID - English",
-            "name": "gravity_form_id_en",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
-        },
-        {
-            "key": "field_5929d72aee79a",
-            "label": "CTA Gravity Form ID - Spanish",
-            "name": "gravity_form_id_es",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
-        },
-        {
-            "key": "field_5929d743ee79b",
-            "label": "CTA Gravity Form ID - Russian",
-            "name": "gravity_form_id_ru",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
-        },
-        {
-            "key": "field_5929d751ee79c",
-            "label": "CTA Gravity Form ID - French",
-            "name": "gravity_form_id_fr",
+            "key": "field_59ef7d8452bec",
+            "label": "CTA Gravity Form ID",
+            "name": "gravity_form_id",
             "type": "number",
             "instructions": "",
             "required": 0,
@@ -568,6 +505,44 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_59ef778caa628",
+            "label": "About Headline",
+            "name": "about_headline",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59ef77bdaa629",
+            "label": "About Text",
+            "name": "about_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_598c58878f708",
@@ -683,6 +658,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_59ef7b3ef0b58",
+            "label": "Logos Text",
+            "name": "logos_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_592792da14782",
             "label": "Logos",
             "name": "logos",
@@ -794,5 +788,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1502458426
+    "modified": 1508884547
 }
