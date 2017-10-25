@@ -17,12 +17,36 @@
 			<div class="row">
 				
 				<div class="left large-5 columns">
-					<p>&copy; <?php echo date('Y'); ?> <?php the_field('company_copyright_name', 'options'); ?>.</p>
-          <p>All rights reserved.</p>
+					<p>&copy; <?php echo date('Y'); ?> Wenco International Mining Systems Ltd.</p>
+          <p>
+            <?php
+            if (ICL_LANGUAGE_CODE == 'es') {
+              echo 'Todos los derechos reservados.';
+            }elseif(ICL_LANGUAGE_CODE == 'ru'){
+              echo 'Все права защищены.';
+            }elseif(ICL_LANGUAGE_CODE == 'fr'){
+              echo 'Tous les droits sont réservés.';
+            }else{
+              echo 'All rights reserved.';
+            }
+            ?>
+          </p>
 				</div>
 
         <div class="middle large-4 columns">
-          <p>Questions? <a href="/contact">Contact Us</a></p>
+          <p>
+            <?php
+            if (ICL_LANGUAGE_CODE == 'es') {
+              echo '¿Preguntas? <a href="/es/contactos">Contáctenos</a>';
+            }elseif(ICL_LANGUAGE_CODE == 'ru'){
+              echo 'Вопросов? <a href="/ru/contact-russian">Свяжитесь с нами</a>';
+            }elseif(ICL_LANGUAGE_CODE == 'fr'){
+              echo 'Des questions? <a href="/fr/contact/">Contactez nous</a>';
+            }else{
+              echo 'Questions? <a href="/contact">Contact Us</a>';
+            }
+            ?>
+          </p>
 				</div>
 
         <div class="logo large-3 columns">

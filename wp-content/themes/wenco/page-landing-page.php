@@ -118,8 +118,8 @@ get_header( 'landing-page' ); ?>
     
     <div class="row">
       <div class="text columns large-5">
-        <h2>About Us</h2>
-        <p>For over 30 years, Wenco has created technology that helps raise mine performance. Our latest systems take that idea one step further. We’re moving beyond the pit, creating the next generation of technology set to change the future of mining.</p>
+        <h2><?php the_field('about_headline'); ?></h2>
+        <p><?php the_field('about_text'); ?></p>
       </div>
     </div>
 
@@ -130,7 +130,7 @@ get_header( 'landing-page' ); ?>
 
     <div class="row intro">
       <div class="columns large-12">
-        <p>Mines from these operators run <strong>simpler</strong>, <strong>smarter</strong>, and <strong>safer</strong> thanks to Wenco.</p>
+        <p><?php the_field('logos_text'); ?></p>
       </div>
     </div>
 
@@ -145,20 +145,7 @@ get_header( 'landing-page' ); ?>
   </div>
 
   <div class="fancybox-hidden" id="fancy-callout-<?php echo get_the_ID(); ?>">
-
-    <?php
-    // Show a different form based on language.
-    if (ICL_LANGUAGE_CODE == 'es') {
-      gravity_form( get_field('gravity_form_id_es'), true, true, false, null, true );
-    }elseif(ICL_LANGUAGE_CODE == 'ru'){
-      gravity_form( get_field('gravity_form_id_ru'), true, true, false, null, true );
-    }elseif(ICL_LANGUAGE_CODE == 'fr'){
-      gravity_form( get_field('gravity_form_id_fr'), true, true, false, null, true );
-    }else{
-      gravity_form( get_field('gravity_form_id_en'), true, true, false, null, true );
-    }
-    ?>
-
+    <?php gravity_form( get_field('gravity_form_id'), true, true, false, null, true ); ?>
   </div>
 
 <style>
