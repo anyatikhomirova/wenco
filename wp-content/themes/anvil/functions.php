@@ -54,17 +54,6 @@ function forge_saas_setup() {
 	 * Enable support for Post Formats
 	 */
 	//add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
-	
-	/**
-	 * Add new ACF options pages
-	 */ 
- 	if(function_exists("register_options_page"))
-	{
-		register_options_page('Contact');
-		register_options_page('Header');
-		register_options_page('Footer');
-		register_options_page('Page');
-	}
 }
 endif; // forge_saas_setup
 add_action( 'after_setup_theme', 'forge_saas_setup' );
