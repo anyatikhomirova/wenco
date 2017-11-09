@@ -711,12 +711,19 @@ form{
 		@include inline-block();
 		position: relative;
 		background: $lightgrey;
-		
+		display: inline-block;
+    max-width: none;
+    width: auto;
+    height: 32px;
 
 		ul{
 			list-style: none;
 			margin: 0;
 			padding: 0;
+
+      > li {
+        width: 149px;
+      }
 
 			a{
 				display: block;
@@ -765,6 +772,7 @@ form{
 				width: 30px;
 				padding: 0;
 				display: block;
+        border: none;
 				border-left: solid 1px white;
 				background: url(../../images/icon-language-select.png) no-repeat center center;
 
@@ -1931,6 +1939,9 @@ html[lang=en-US]{
         #lang_sel {
           margin-left: 10px;
           text-align: left;
+          display: inline-block;
+          max-width: none;
+          width: auto;
           @media screen and (max-width: 500px) {
             display: none;
           }
