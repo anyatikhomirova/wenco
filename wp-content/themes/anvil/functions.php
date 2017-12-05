@@ -323,14 +323,6 @@ function anvil_wrapper_end() {
 
 
 
-// filter the Gravity Forms button type
-add_filter("gform_submit_button", "form_submit_button", 10, 2);
-function form_submit_button($button, $form){
-    return "<button class='button' id='gform_submit_button_{$form["id"]}'><span>" .__( "Submit", 'forge_saas' ) ." »</span></button>";
-}
-
-
-
 
 
 class mobile_walker extends Walker_Nav_Menu{		
